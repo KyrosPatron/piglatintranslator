@@ -77,7 +77,12 @@ public class TranslatorTest {
 		Translator translator = new Translator ("hello");
 		assertEquals("ellohay",translator.translate());
 	}
-	
+
+	@Test
+	public void testTranslationWordStartsWithConsonantZ() throws Exception {
+		Translator translator = new Translator ("zap");
+		assertEquals("apzay",translator.translate());
+	}
 	
 	
 
