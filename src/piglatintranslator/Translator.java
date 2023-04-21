@@ -25,7 +25,16 @@ public class Translator {
 	}
 
 	public String translate() throws PigLatinException {
-		return "nil";
+		if (phrase.equals("")) {
+			return "nil";
+		} else if (this.isFirstVowel(phrase)) {
+			if (phrase.endsWith("y")) {
+				return phrase + "nay";
+			}
+			
+		}
+
+		return null;
 	}
 	
 	

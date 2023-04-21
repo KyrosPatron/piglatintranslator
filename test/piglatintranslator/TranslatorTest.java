@@ -36,5 +36,12 @@ public class TranslatorTest {
 		assertFalse(translator.isFirstVowel("base"));
 	}
 	
+	@Test
+	public void testTranslationWordStartsWithVowelEndWithY() throws Exception {
+		Translator translator = new Translator ("any");
+		assertEquals("anynay",translator.translate());
+	}
+	
+	
 
 }
