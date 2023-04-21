@@ -28,7 +28,7 @@ public class Translator {
 		if (phrase.equals("")) {
 			return "nil";
 		} else if (this.isFirstVowel(phrase)) {
-			if (this.isLastY()) {
+			if (this.isLastY(phrase)) {
 				return phrase + "nay";
 			}else if(this.isLastVowel(phrase)) {
 				return phrase + "yay";
@@ -53,8 +53,8 @@ public class Translator {
 		return vowels.contains(lastC);
 	}
 	
-	public boolean isLastY() {
-		return this.phrase.endsWith("y");
+	public boolean isLastY(String word) {
+		return word.endsWith("y");
 	}
 	
 
