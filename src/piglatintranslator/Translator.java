@@ -25,22 +25,35 @@ public class Translator {
 	}
 
 	public String translate() throws PigLatinException {
-		if (phrase.equals("")) {
+		String translation="";
+		String[] words = phrase.split("\\s");
+		
+		for (String word : words) {
+			translation+=this.translateWord(word) + " ";
+			
+		}
+		
+		return translation.trim();
+	}
+
+	public String translateWord(String word) {
+		if (word.equals("")) {
 			return "nil";
-		} else if (this.isFirstVowel(phrase)) {
-			if (this.isLastY(phrase)) {
-				return phrase + "nay";
-			}else if(this.isLastVowel(phrase)) {
-				return phrase + "yay";
+		} else if (this.isFirstVowel(word)) {
+			if (this.isLastY(word)) {
+				return word + "nay";
+			}else if(this.isLastVowel(word)) {
+				return word + "yay";
 			}else {
-				return phrase + "ay";
+				return word + "ay";
 			}
 			
 		} else {
-			int count = this.countStartingConsonants(phrase);
-			return phrase.substring(count) + phrase.subSequence(0, count) + "ay";
+			int count = this.countStartingConsonants(word);
+			return word.substring(count) + word.subSequence(0, count) + "ay";
 		
 		}
+		
 	}
 	
 	

@@ -116,6 +116,12 @@ public class TranslatorTest {
 		assertEquals("kbay",translator.translate());
 	}
 	
+	@Test
+	public void testTranslationPhrase() throws Exception {
+		Translator translator = new Translator ("hello world");
+		assertEquals("ellohay orldway",translator.translate());
+	}
+	
 	
 	
 
