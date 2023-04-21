@@ -18,5 +18,23 @@ public class TranslatorTest {
 		assertEquals("nil", translator.translate());
 	}
 	
+	@Test
+	public void testFirstLetterIsVowelA() throws Exception {
+		Translator translator = new Translator ("");
+		assertTrue(translator.isFirstVowel("any"));
+	}
+	
+	@Test
+	public void testFirstLetterIsVowelU() throws Exception {
+		Translator translator = new Translator ("");
+		assertTrue(translator.isFirstVowel("unity"));
+	}
+	
+	@Test
+	public void testFirstLetterIsNotVowel() throws Exception {
+		Translator translator = new Translator ("");
+		assertFalse(translator.isFirstVowel("base"));
+	}
+	
 
 }
