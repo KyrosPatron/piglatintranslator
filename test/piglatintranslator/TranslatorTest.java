@@ -7,8 +7,9 @@ import org.junit.Test;
 public class TranslatorTest {
 
 	@Test
-	public void test() {
-		fail();
+	public void testInputPhrase() {
+		Translator translator = new Translator ("Hello World");
+		assertEquals("Hello World", translator.getPhrase());
 	}
 
 }
