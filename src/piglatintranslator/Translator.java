@@ -36,9 +36,10 @@ public class Translator {
 				return phrase + "ay";
 			}
 			
+		} else {
+			return phrase.substring(1) + phrase.subSequence(0, 1) + "ay";
+		
 		}
-
-		return null;
 	}
 	
 	

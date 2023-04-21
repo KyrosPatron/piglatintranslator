@@ -72,5 +72,13 @@ public class TranslatorTest {
 		assertEquals("indeeday",translator.translate());
 	}
 	
+	@Test
+	public void testTranslationWordStartsWithConsonantH() throws Exception {
+		Translator translator = new Translator ("hello");
+		assertEquals("ellohay",translator.translate());
+	}
+	
+	
+	
 
 }
