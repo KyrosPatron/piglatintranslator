@@ -110,6 +110,12 @@ public class TranslatorTest {
 		assertEquals(2,translator.countStartingConsonants("kb"));
 	}
 	
+	@Test
+	public void testStartingWithOnlyConsonants() throws Exception {
+		Translator translator = new Translator ("kb");
+		assertEquals("kbay",translator.translate());
+	}
+	
 	
 	
 
