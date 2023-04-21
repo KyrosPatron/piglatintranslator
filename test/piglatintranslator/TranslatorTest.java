@@ -53,12 +53,24 @@ public class TranslatorTest {
 		Translator translator = new Translator ("idea");
 		assertEquals("ideayay",translator.translate());
 	}
+	
 	@Test
 	public void testTranslationWordStartsWithVowelUEndsWithVowelO() throws Exception {
 		Translator translator = new Translator ("undo");
 		assertEquals("undoyay",translator.translate());
 	}
 	
+	@Test
+	public void testTranslationWordStartsWithVowelAEndsWithConsonantK() throws Exception {
+		Translator translator = new Translator ("ask");
+		assertEquals("askay",translator.translate());
+	}
+	
+	@Test
+	public void testTranslationWordStartsWithVowelIEndsWithConsonantD() throws Exception {
+		Translator translator = new Translator ("indeed");
+		assertEquals("indeeday",translator.translate());
+	}
 	
 
 }

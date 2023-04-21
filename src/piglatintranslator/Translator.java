@@ -32,6 +32,8 @@ public class Translator {
 				return phrase + "nay";
 			}else if(this.isLastVowel(phrase)) {
 				return phrase + "yay";
+			}else {
+				return phrase + "ay";
 			}
 			
 		}
@@ -49,8 +51,6 @@ public class Translator {
 		char lastC = word.charAt(word.length()-1);
 		return vowels.contains(lastC);
 	}
-	
-
 	
 	public boolean isLastY() {
 		return this.phrase.endsWith("y");
