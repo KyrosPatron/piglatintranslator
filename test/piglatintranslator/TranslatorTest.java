@@ -42,6 +42,12 @@ public class TranslatorTest {
 		assertEquals("anynay",translator.translate());
 	}
 	
+	@Test
+	public void testTranslationWordStartsWithVowelEndsWithVowel() throws Exception {
+		Translator translator = new Translator ("apple");
+		assertEquals("appleyay",translator.translate());
+	}
+	
 	
 
 }

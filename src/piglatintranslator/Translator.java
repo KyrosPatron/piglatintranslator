@@ -28,8 +28,10 @@ public class Translator {
 		if (phrase.equals("")) {
 			return "nil";
 		} else if (this.isFirstVowel(phrase)) {
-			if (phrase.endsWith("y")) {
+			if (this.isLastY()) {
 				return phrase + "nay";
+			}else if(this.isLastVowel(phrase)) {
+				return phrase + "yay";
 			}
 			
 		}
@@ -42,6 +44,19 @@ public class Translator {
 		char firstC = word.charAt(0);
 		return vowels.contains(firstC);
 	}
+	
+	public boolean isLastVowel(String word) {
+		char lastC = word.charAt(word.length()-1);
+		return vowels.contains(lastC);
+	}
+	
+
+	
+	public boolean isLastY() {
+		return this.phrase.endsWith("y");
+	}
+	
+
 	
 
 }
