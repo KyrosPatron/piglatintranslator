@@ -2,6 +2,7 @@ package piglatintranslator;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TranslatorTest {
@@ -83,6 +84,32 @@ public class TranslatorTest {
 		Translator translator = new Translator ("zap");
 		assertEquals("apzay",translator.translate());
 	}
+	
+	@Ignore
+	@Test
+	public void testTranslationWordStartsWithMoreConsonant() throws Exception {
+		Translator translator = new Translator ("known");
+		assertEquals("ownknay",translator.translate());
+	}
+	
+	@Test
+	public void testCountsStartingWith2Consonants() throws Exception {
+		Translator translator = new Translator ("");
+		assertEquals(2,translator.countStartingConsonants("known"));
+	}
+	
+	@Test
+	public void testCountsStartingWith0Consonants() throws Exception {
+		Translator translator = new Translator ("");
+		assertEquals(0,translator.countStartingConsonants("apple"));
+	}
+	
+	@Test
+	public void testCountsStartingWithOnlyConsonants() throws Exception {
+		Translator translator = new Translator ("");
+		assertEquals(2,translator.countStartingConsonants("kb"));
+	}
+	
 	
 	
 

@@ -56,6 +56,15 @@ public class Translator {
 	public boolean isLastY(String word) {
 		return word.endsWith("y");
 	}
+
+	public int countStartingConsonants(String word) {
+		for (int i = 0; i < word.length(); i++) {
+			if (vowels.contains(word.charAt(i))){
+				return i;
+			}
+		}
+		return word.length();
+	}
 	
 
 	
