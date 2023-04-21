@@ -85,7 +85,7 @@ public class TranslatorTest {
 		assertEquals("apzay",translator.translate());
 	}
 	
-	@Ignore
+
 	@Test
 	public void testTranslationWordStartsWithMoreConsonant() throws Exception {
 		Translator translator = new Translator ("known");

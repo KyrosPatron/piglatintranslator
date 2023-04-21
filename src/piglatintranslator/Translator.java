@@ -37,7 +37,8 @@ public class Translator {
 			}
 			
 		} else {
-			return phrase.substring(1) + phrase.subSequence(0, 1) + "ay";
+			int count = this.countStartingConsonants(phrase);
+			return phrase.substring(count) + phrase.subSequence(0, count) + "ay";
 		
 		}
 	}
